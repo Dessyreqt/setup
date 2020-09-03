@@ -11,5 +11,6 @@ choco install -y firefox
 choco install -y googlechrome
 choco install -y keepass.install
 choco install -y notepadplusplus
+choco install -y patchcleaner
 choco install -y sysinternals
-choco install -y windirstat
+choco install -y treesizefree
