@@ -20,7 +20,6 @@ function executeScript {
 }
 
 #--- Setting up Windows ---
-executeScript "Windows10Debloater.ps1"
 executeScript "FileExplorerSettings.ps1";
 executeScript "SystemConfiguration.ps1";
 
