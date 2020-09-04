@@ -11,6 +11,7 @@ A repository to keep setup scripts and settings
 | [David's Non-Dev Machine Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/DavidNoDev.ps1) | for David's non-dev machines |
 | [No Applications](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/NoApps.ps1) | for troubleshooting if the other scripts hang or fail |
 
+If you need to debloat your Win10 install you may try [This Debloater Script](https://github.com/Sycnex/Windows10Debloater)
 ## some links
 For inspiration
 
