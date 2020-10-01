@@ -1,4 +1,4 @@
-$base_dir = resolve-path .
+$baseDir = resolve-path .
 
 function Format-XML ([xml]$xml)
 {
@@ -39,7 +39,7 @@ function Remove-BackupData($path) {
 }
 
 function Update-NppConfig {
-    $configXmlPath = "$base_dir\Notepad++\config.xml"
+    $configXmlPath = "$baseDir\Notepad++\config.xml"
     $configXml = [xml](Get-Content $configXmlPath)
     
     $findHistoryNode = $configXml.NotepadPlus.FindHistory
@@ -63,11 +63,11 @@ function Backup-NppConfig {
     Update-NppConfig
 }
 
-function Backup-ConEmu {
+function Backup-ConEmuConfig {
     Remove-BackupData ".\ConEmu"
     Backup-File "C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml" ".\ConEmu"
 }
 
 Backup-NppConfig
-Backup-ConEmu
+Backup-ConEmuConfig
 

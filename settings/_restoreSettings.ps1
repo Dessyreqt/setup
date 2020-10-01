@@ -1,3 +1,11 @@
+$baseDir = resolve-path .
+
+function Set-EnvironmentVariables {
+    $codeFolder = resolve-path $baseDir\..\..\..
+    setx CodeFolder $codeFolder
+    $env:CodeFolder = $codeFolder
+}
+
 function Format-XML ([xml]$xml, $indent=2)
 {
     $stringWriter = New-Object System.IO.StringWriter
@@ -31,9 +39,10 @@ function Restore-NppConfig {
     Update-NppConfig
 }
 
-function Restore-ConEmu {
+function Restore-ConEmuConfig {
     Restore-Folder ".\ConEmu" "C:\tools\cmdermini\vendor\conemu-maximus5"
 }
 
+Set-EnvironmentVariables
 Restore-NppConfig
-Restore-ConEmu
+Restore-ConEmuConfig
