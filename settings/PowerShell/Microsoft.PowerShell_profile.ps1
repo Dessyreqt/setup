@@ -1,5 +1,3 @@
-Import-Module posh-git
-
 New-Alias Npp "C:\Program Files\Notepad++\notepad++.exe"
 New-Alias GitSummary "$env:CodeFolder\Dessyreqt\GitSummary\GitSummary.ps1"
 New-Alias IisExpress "C:\Program Files\IIS Express\iisexpress.exe"
