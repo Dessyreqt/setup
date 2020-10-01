@@ -1,15 +1,16 @@
 $base_dir = resolve-path .
 
-function Format-XML ([xml]$xml, $indent=2)
+function Format-XML ([xml]$xml)
 {
-    $StringWriter = New-Object System.IO.StringWriter
-    $XmlWriter = New-Object System.XMl.XmlTextWriter $StringWriter
-    $xmlWriter.Formatting = "indented"
-    $xmlWriter.Indentation = $Indent
-    $xml.WriteContentTo($XmlWriter)
-    $XmlWriter.Flush()
-    $StringWriter.Flush()
-    Write-Output $StringWriter.ToString()
+    $stringWriter = New-Object System.IO.StringWriter
+    $xmlWriterSettings = New-Object System.Xml.XmlWriterSettings
+    $xmlWriterSettings.OmitXmlDeclaration = $true
+    $xmlWriterSettings.Indent = $true
+    $xmlWriter = [System.XML.XmlWriter]::Create($stringWriter, $xmlWriterSettings)
+    $xml.WriteContentTo($xmlWriter)
+    $xmlWriter.Flush()
+    $stringWriter.Flush()
+    Write-Output $stringWriter.ToString()
 }
 
 function Remove-NppConfig {
@@ -33,7 +34,7 @@ function Update-NppConfig {
     $stylerThemeNode.path = $stylerThemeNode.path.Replace($env:APPDATA, "%APPDATA%")
 
     $configXml.Save($configXmlPath)
-    Format-XML $configXml -indent 4 | Out-File $configXmlPath
+    Format-XML $configXml | Out-File $configXmlPath
 }
 
 function Backup-NppConfig {
