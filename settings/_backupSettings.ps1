@@ -14,8 +14,7 @@ function Format-XML ([xml]$xml)
     Write-Output $stringWriter.ToString()
 }
 
-# Backup-Data "$env:APPDATA\Notepad++" ".\Notepad++" @("session.xml") @("backup") # Sample usage
-function Backup-Data($from, $to, $exclude, $excludeMatch) {
+function Backup-Folder($from, $to, $exclude, $excludeMatch) {
     [regex] $excludeMatchRegEx = '(?i)' + (($excludeMatch | ForEach-Object { [regex]::escape($_) }) -join "|") + ''
     Copy-Item -Path $from -Destination $to -Recurse -Force -Filter {PSIsContainer}
     Get-ChildItem -Path $from -Recurse -Exclude $exclude | 
@@ -30,11 +29,15 @@ function Backup-Data($from, $to, $exclude, $excludeMatch) {
     } -Force -Exclude $exclude -Container
 }
 
-function Remove-NppConfig {
-    Remove-Item -Recurse -Force ".\Notepad++" -ErrorAction SilentlyContinue
+function Backup-File($from, $to) {
+    mkdir $to | Out-Null
+    Copy-Item -Path $from -Destination $to -Force
 }
 
-# Keeping for now as example of how to work with xml
+function Remove-BackupData($path) {
+    Remove-Item -Recurse -Force $path -ErrorAction SilentlyContinue
+}
+
 function Update-NppConfig {
     $configXmlPath = "$base_dir\Notepad++\config.xml"
     $configXml = [xml](Get-Content $configXmlPath)
@@ -54,14 +57,17 @@ function Update-NppConfig {
     [System.IO.File]::WriteAllLines($configXmlPath, (Format-XML $configXml))
 }
 
-function Backup-NppConfig() {
-    Remove-NppConfig
-
-    # mkdir ".\Notepad++\themes" | Out-Null
-    # Copy-Item -Path "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml" -Destination ".\Notepad++\themes" -Force
-    Backup-Data "$env:APPDATA\Notepad++" ".\Notepad++" @("session.xml") @("backup") # Sample usage
-
+function Backup-NppConfig {
+    Remove-BackupData ".\Notepad++"
+    Backup-Folder "$env:APPDATA\Notepad++" ".\Notepad++" @("session.xml") @("backup")
     Update-NppConfig
 }
 
+function Backup-ConEmu {
+    Remove-BackupData ".\ConEmu"
+    Backup-File "C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml" ".\ConEmu"
+}
+
 Backup-NppConfig
+Backup-ConEmu
+
