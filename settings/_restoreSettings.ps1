@@ -2,7 +2,7 @@ $baseDir = resolve-path .
 
 function Set-EnvironmentVariables {
     $codeFolder = resolve-path $baseDir\..\..\..
-    setx CodeFolder $codeFolder
+    setx CodeFolder $codeFolder | Out-Null
     $env:CodeFolder = $codeFolder
 }
 
@@ -24,6 +24,10 @@ function Restore-Folder($from, $to) {
     Copy-Item -Path "$from\*" -Destination $to -Recurse -Force -Container
 }
 
+function Restore-File($from, $to) {
+    Copy-Item -Path $from -Destination $to -Force
+}
+
 function Update-NppConfig {
     $configXmlPath = "$env:APPDATA\Notepad++\config.xml"
     $configXml = [xml](Get-Content $configXmlPath)
@@ -43,6 +47,12 @@ function Restore-ConEmuConfig {
     Restore-Folder ".\ConEmu" "C:\tools\cmdermini\vendor\conemu-maximus5"
 }
 
+function Restore-PowerShell {
+    Restore-File ".\PowerShell\Microsoft.PowerShell_profile.ps1" $profile
+    . $profile
+}
+
 Set-EnvironmentVariables
 Restore-NppConfig
 Restore-ConEmuConfig
+Restore-PowerShell

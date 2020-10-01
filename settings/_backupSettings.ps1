@@ -68,6 +68,12 @@ function Backup-ConEmuConfig {
     Backup-File "C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml" ".\ConEmu"
 }
 
+function Backup-PowerShell {
+    Remove-BackupData ".\PowerShell"
+    Backup-File $profile ".\PowerShell"
+}
+
 Backup-NppConfig
 Backup-ConEmuConfig
+Backup-PowerShell
 
