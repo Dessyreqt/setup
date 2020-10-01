@@ -13,10 +13,27 @@ function Format-XML ([xml]$xml)
     Write-Output $stringWriter.ToString()
 }
 
+# Backup-Data "$env:APPDATA\Notepad++" ".\Notepad++" @("session.xml") @("backup") # Sample usage
+function Backup-Data($from, $to, $exclude, $excludeMatch) {
+    [regex] $excludeMatchRegEx = '(?i)' + (($excludeMatch | ForEach-Object { [regex]::escape($_) }) -join "|") + ''
+    Copy-Item -Path $from -Destination $to -Recurse -Force -Filter {PSIsContainer}
+    Get-ChildItem -Path $from -Recurse -Exclude $exclude | 
+    Where-Object { $null -eq $excludeMatch -or $_.FullName.Replace($from, "") -notmatch $excludeMatchRegEx } |
+    Copy-Item -Destination {
+        if ($_.PSIsContainer) {
+            Join-Path $to $_.Parent.FullName.Substring($from.length)
+        }
+        else {
+            Join-Path $to $_.FullName.Substring($from.length)
+        }
+    } -Force -Exclude $exclude -Container
+}
+
 function Remove-NppConfig {
     Remove-Item -Recurse -Force ".\Notepad++" -ErrorAction SilentlyContinue
 }
 
+# Keeping for now as example of how to work with xml
 function Update-NppConfig {
     $configXmlPath = "$base_dir\Notepad++\config.xml"
     $configXml = [xml](Get-Content $configXmlPath)
@@ -37,27 +54,13 @@ function Update-NppConfig {
     Format-XML $configXml | Out-File $configXmlPath
 }
 
-function Backup-NppConfig {
+function Backup-NppConfig() {
     Remove-NppConfig
 
-    $from = "$env:APPDATA\Notepad++"
-    $to = ".\Notepad++"
-    $exclude = @("") # @("main.js")
-    $excludeMatch = @("backup") # @("app1", "app2", "app3")
-    [regex] $excludeMatchRegEx = '(?i)' + (($excludeMatch | foreach { [regex]::escape($_) }) -join "|") + ''
-    Copy-Item -Path $from -Destination $to -Recurse -Force -Filter {PSIsContainer}
-    Get-ChildItem -Path $from -Recurse -Exclude $exclude | 
-    Where-Object { $excludeMatch -eq $null -or $_.FullName.Replace($from, "") -notmatch $excludeMatchRegEx } |
-    Copy-Item -Destination {
-        if ($_.PSIsContainer) {
-            Join-Path $to $_.Parent.FullName.Substring($from.length)
-        }
-        else {
-            Join-Path $to $_.FullName.Substring($from.length)
-        }
-    } -Force -Exclude $exclude -Container
+    mkdir ".\Notepad++\themes" | Out-Null
+    Copy-Item -Path "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml" -Destination ".\Notepad++\themes" -Force
 
-    Update-NppConfig
+    # Update-NppConfig
 }
 
 Backup-NppConfig
