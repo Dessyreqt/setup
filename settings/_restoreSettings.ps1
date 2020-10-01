@@ -4,6 +4,7 @@ function Format-XML ([xml]$xml, $indent=2)
     $xmlWriterSettings = New-Object System.Xml.XmlWriterSettings
     $xmlWriterSettings.OmitXmlDeclaration = $true
     $xmlWriterSettings.Indent = $true
+    $xmlWriterSettings.IndentChars = '    '
     $xmlWriter = [System.XML.XmlWriter]::Create($stringWriter, $xmlWriterSettings)
     $xml.WriteContentTo($xmlWriter)
     $xmlWriter.Flush()
@@ -16,10 +17,9 @@ function Update-NppConfig {
     $configXml = [xml](Get-Content $configXmlPath)
 
     $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
-    $stylerThemeNode.path = $stylerThemeNode.path.Replace("%APPDATA%", $env:APPDATA)
+    $stylerThemeNode.path = "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml"
 
-    $configXml.Save($configXmlPath)
-    Format-XML $configXml -indent 4 | Out-File $configXmlPath
+    [System.IO.File]::WriteAllLines($configXmlPath, (Format-XML $configXml))
 }
 
 function Restore-NppConfig {
