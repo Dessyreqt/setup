@@ -1,9 +1,45 @@
-function Remove-Npp {
+$base_dir = resolve-path .
+
+function Format-XML ([xml]$xml, $indent=2)
+{
+    $StringWriter = New-Object System.IO.StringWriter
+    $XmlWriter = New-Object System.XMl.XmlTextWriter $StringWriter
+    $xmlWriter.Formatting = "indented"
+    $xmlWriter.Indentation = $Indent
+    $xml.WriteContentTo($XmlWriter)
+    $XmlWriter.Flush()
+    $StringWriter.Flush()
+    Write-Output $StringWriter.ToString()
+}
+
+function Remove-NppConfig {
     Remove-Item -Recurse -Force ".\Notepad++" -ErrorAction SilentlyContinue
 }
 
-function Backup-Npp {
-    $from = "$env:appdata\Notepad++"
+function Update-NppConfig {
+    $configXmlPath = "$base_dir\Notepad++\config.xml"
+    $configXml = [xml](Get-Content $configXmlPath)
+    
+    $findHistoryNode = $configXml.NotepadPlus.FindHistory
+    $findHistoryNode.SelectNodes("Path") | ForEach-Object{ $findHistoryNode.RemoveChild($_) } | Out-Null
+    $findHistoryNode.SelectNodes("Filter") | ForEach-Object{ $findHistoryNode.RemoveChild($_) } | Out-Null
+    $findHistoryNode.SelectNodes("Find") | ForEach-Object{ $findHistoryNode.RemoveChild($_) } | Out-Null
+    $findHistoryNode.SelectNodes("Replace") | ForEach-Object{ $findHistoryNode.RemoveChild($_) } | Out-Null
+
+    $historyNode = $configXml.NotepadPlus.History
+    $historyNode.SelectNodes("File") | ForEach-Object{ $historyNode.RemoveChild($_) } | Out-Null
+
+    $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
+    $stylerThemeNode.path = $stylerThemeNode.path.Replace($env:APPDATA, "%APPDATA%")
+
+    $configXml.Save($configXmlPath)
+    Format-XML $configXml -indent 4 | Out-File $configXmlPath
+}
+
+function Backup-NppConfig {
+    Remove-NppConfig
+
+    $from = "$env:APPDATA\Notepad++"
     $to = ".\Notepad++"
     $exclude = @("") # @("main.js")
     $excludeMatch = @("backup") # @("app1", "app2", "app3")
@@ -19,7 +55,8 @@ function Backup-Npp {
             Join-Path $to $_.FullName.Substring($from.length)
         }
     } -Force -Exclude $exclude -Container
+
+    Update-NppConfig
 }
 
-Remove-Npp
-Backup-Npp
+Backup-NppConfig
