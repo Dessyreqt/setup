@@ -12,6 +12,10 @@ function Format-XML ([xml]$xml, $indent=2)
     Write-Output $stringWriter.ToString()
 }
 
+function Restore-Folder($from, $to) {
+    Copy-Item -Path "$from\*" -Destination $to -Recurse -Force -Container
+}
+
 function Update-NppConfig {
     $configXmlPath = "$env:APPDATA\Notepad++\config.xml"
     $configXml = [xml](Get-Content $configXmlPath)
@@ -23,11 +27,13 @@ function Update-NppConfig {
 }
 
 function Restore-NppConfig {
-    $from = ".\Notepad++"
-    $to = "$env:appdata"
-    Copy-Item -Path $from -Destination $to -Recurse -Force -Container
-
+    Restore-Folder ".\Notepad++" "$env:appdata\Notepad++" 
     Update-NppConfig
 }
 
+function Restore-ConEmu {
+    Restore-Folder ".\ConEmu" "C:\tools\cmdermini\vendor\conemu-maximus5"
+}
+
 Restore-NppConfig
+Restore-ConEmu
