@@ -6,6 +6,7 @@ function Format-XML ([xml]$xml)
     $xmlWriterSettings = New-Object System.Xml.XmlWriterSettings
     $xmlWriterSettings.OmitXmlDeclaration = $true
     $xmlWriterSettings.Indent = $true
+    $xmlWriterSettings.IndentChars = '    '
     $xmlWriter = [System.XML.XmlWriter]::Create($stringWriter, $xmlWriterSettings)
     $xml.WriteContentTo($xmlWriter)
     $xmlWriter.Flush()
@@ -50,17 +51,17 @@ function Update-NppConfig {
     $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
     $stylerThemeNode.path = $stylerThemeNode.path.Replace($env:APPDATA, "%APPDATA%")
 
-    $configXml.Save($configXmlPath)
-    Format-XML $configXml | Out-File $configXmlPath
+    [System.IO.File]::WriteAllLines($configXmlPath, (Format-XML $configXml))
 }
 
 function Backup-NppConfig() {
     Remove-NppConfig
 
-    mkdir ".\Notepad++\themes" | Out-Null
-    Copy-Item -Path "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml" -Destination ".\Notepad++\themes" -Force
+    # mkdir ".\Notepad++\themes" | Out-Null
+    # Copy-Item -Path "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml" -Destination ".\Notepad++\themes" -Force
+    Backup-Data "$env:APPDATA\Notepad++" ".\Notepad++" @("session.xml") @("backup") # Sample usage
 
-    # Update-NppConfig
+    Update-NppConfig
 }
 
 Backup-NppConfig
