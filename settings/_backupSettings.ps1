@@ -1,6 +1,6 @@
 $baseDir = resolve-path .
 
-function Format-XML ([xml]$xml)
+function Write-FormattedXml ($path, [xml]$xml)
 {
     $stringWriter = New-Object System.IO.StringWriter
     $xmlWriterSettings = New-Object System.Xml.XmlWriterSettings
@@ -11,7 +11,7 @@ function Format-XML ([xml]$xml)
     $xml.WriteContentTo($xmlWriter)
     $xmlWriter.Flush()
     $stringWriter.Flush()
-    Write-Output $stringWriter.ToString()
+    [System.IO.File]::WriteAllLines($path, $stringWriter.ToString())
 }
 
 function Backup-Folder($from, $to, $exclude, $excludeMatch) {
@@ -54,7 +54,7 @@ function Update-NppConfig {
     $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
     $stylerThemeNode.path = $stylerThemeNode.path.Replace($env:APPDATA, "%APPDATA%")
 
-    [System.IO.File]::WriteAllLines($configXmlPath, (Format-XML $configXml))
+    Write-FormattedXml $configXmlPath $configXml
 }
 
 function Backup-NppConfig {

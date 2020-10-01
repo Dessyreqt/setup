@@ -6,7 +6,7 @@ function Set-EnvironmentVariables {
     $env:CodeFolder = $codeFolder
 }
 
-function Format-XML ([xml]$xml, $indent=2)
+function Write-FormattedXml ($path, [xml]$xml)
 {
     $stringWriter = New-Object System.IO.StringWriter
     $xmlWriterSettings = New-Object System.Xml.XmlWriterSettings
@@ -17,7 +17,7 @@ function Format-XML ([xml]$xml, $indent=2)
     $xml.WriteContentTo($xmlWriter)
     $xmlWriter.Flush()
     $stringWriter.Flush()
-    Write-Output $stringWriter.ToString()
+    [System.IO.File]::WriteAllLines($path, $stringWriter.ToString())
 }
 
 function Restore-Folder($from, $to) {
@@ -35,7 +35,7 @@ function Update-NppConfig {
     $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
     $stylerThemeNode.path = "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml"
 
-    [System.IO.File]::WriteAllLines($configXmlPath, (Format-XML $configXml))
+    Write-FormattedXml $configXmlPath $configXml
 }
 
 function Restore-NppConfig {
