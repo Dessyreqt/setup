@@ -5,6 +5,7 @@ choco install -y ccleaner
 choco install -y chocolateygui
 choco install -y cmdermini
 choco install -y dotnetcore-runtime.install
+choco install -y dotnet-runtime
 choco install -y dotnetfx
 choco install -y dropbox
 choco install -y firefox
