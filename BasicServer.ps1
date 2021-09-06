@@ -22,7 +22,6 @@ function executeScript {
 #--- Setting up Windows ---
 executeScript "FileExplorerSettings.ps1";
 executeScript "SystemConfiguration.ps1";
-executeScript "HyperV.ps1";
 executeScript "CommonApplications.ps1"
 executeScript "ServerApplications.ps1"
 
