@@ -1,3 +1,12 @@
+Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
+
+function Prompt { 
+    $prompt = Write-Prompt "$($ExecutionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Green
+    $prompt += Write-VcsStatus
+    $prompt += Write-Prompt "`r`nλ" -ForegroundColor Gray
+    if ($prompt) {$prompt} else {" "}
+}
+
 New-Alias Npp "C:\Program Files\Notepad++\notepad++.exe"
 New-Alias GitSummary "$env:CodeFolder\Dessyreqt\GitSummary\GitSummary.ps1"
 New-Alias IisExpress "C:\Program Files\IIS Express\iisexpress.exe"
@@ -28,3 +37,11 @@ Register-ArgumentCompleter -Native -CommandName nuke -ScriptBlock {
            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
         }
 }
+
+# Chocolatey profile
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
+
+
