@@ -51,7 +51,7 @@
                 "guid": "{c32bb3f2-f7cf-49f0-9eb2-3b3e22247d0a}",
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell Git",
-                "startingDirectory": "D:\\github\\Dessyreqt"
+                "startingDirectory": "%CodeFolder%\\Dessyreqt"
             },
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
