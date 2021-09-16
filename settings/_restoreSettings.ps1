@@ -43,8 +43,8 @@ function Restore-NppConfig {
     Update-NppConfig
 }
 
-function Restore-ConEmuConfig {
-    Restore-Folder ".\ConEmu" "C:\tools\cmdermini\vendor\conemu-maximus5"
+function Restore-WindowsTerminalConfig {
+    Restore-Folder ".\WindowsTerminalConfig" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 }
 
 function Restore-PowerShell {
@@ -54,5 +54,5 @@ function Restore-PowerShell {
 
 Set-EnvironmentVariables
 Restore-NppConfig
-Restore-ConEmuConfig
+Restore-WindowsTerminalConfig
 Restore-PowerShell

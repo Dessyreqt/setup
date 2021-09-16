@@ -63,9 +63,9 @@ function Backup-NppConfig {
     Update-NppConfig
 }
 
-function Backup-ConEmuConfig {
-    Remove-BackupData ".\ConEmu"
-    Backup-File "C:\tools\cmdermini\vendor\conemu-maximus5\ConEmu.xml" ".\ConEmu"
+function Backup-WindowsTerminalConfig {
+    Remove-BackupData ".\WindowsTerminal"
+    Backup-File "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" ".\WindowsTerminal"
 }
 
 function Backup-PowerShell {
@@ -74,6 +74,6 @@ function Backup-PowerShell {
 }
 
 Backup-NppConfig
-Backup-ConEmuConfig
+Backup-WindowsTerminalConfig
 Backup-PowerShell
 
