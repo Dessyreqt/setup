@@ -44,7 +44,7 @@ function Restore-NppConfig {
 }
 
 function Restore-WindowsTerminalConfig {
-    Restore-Folder ".\WindowsTerminalConfig" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
+    Restore-Folder ".\WindowsTerminal" "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
 }
 
 function Restore-PowerShell {
