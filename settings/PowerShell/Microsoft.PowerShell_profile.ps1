@@ -1,9 +1,12 @@
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
 function Prompt { 
-    $prompt = Write-Prompt "$($ExecutionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Green
+    $prompt = Write-Prompt "[" -ForegroundColor DarkGray
+    $prompt = Write-Prompt "$(Get-Date)" -ForegroundColor DarkCyan
+    $prompt = Write-Prompt "] " -ForegroundColor DarkGray
+    $prompt += Write-Prompt "$($ExecutionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Green
     $prompt += Write-VcsStatus
-    $prompt += Write-Prompt "`r`n>" -ForegroundColor Gray
+    $prompt += Write-Prompt "`r`n>" -ForegroundColor DarkGray
     if ($prompt) {$prompt} else {" "}
 }
 
