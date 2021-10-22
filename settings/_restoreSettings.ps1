@@ -49,6 +49,8 @@ function Restore-WindowsTerminalConfig {
 }
 
 function Restore-PowerShell {
+    $profilePath = Split-Path -Path $profile
+    New-Item -ItemType Directory -Force -Path $profilePath
     Restore-File ".\PowerShell\Microsoft.PowerShell_profile.ps1" $profile
     . $profile
 }
