@@ -21,6 +21,7 @@ function Write-FormattedXml ($path, [xml]$xml)
 }
 
 function Restore-Folder($from, $to) {
+    New-Item -ItemType Directory -Force -Path $to
     Copy-Item -Path "$from\*" -Destination $to -Recurse -Force -Container
 }
 
