@@ -32,7 +32,7 @@
     "copyOnSelect": false,
     "defaultProfile": "{c32bb3f2-f7cf-49f0-9eb2-3b3e22247d0a}",
     "initialCols": 180,
-    "initialRows": 40,
+    "initialRows": 50,
     "profiles": 
     {
         "defaults": 
@@ -47,7 +47,7 @@
         "list": 
         [
             {
-                "commandline": "%LOCALAPPDATA%\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
+                "commandline": "C:\\Users\\Dessyreqt\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.PowerShell_8wekyb3d8bbwe\\pwsh.exe",
                 "guid": "{c32bb3f2-f7cf-49f0-9eb2-3b3e22247d0a}",
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell Git",
