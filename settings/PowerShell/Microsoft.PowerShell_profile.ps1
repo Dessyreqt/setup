@@ -10,8 +10,13 @@ function Prompt {
     if ($prompt) {$prompt} else {" "}
 }
 
+if (Test-Path Alias:Npp) { Remove-Item Alias:Npp }
 New-Alias Npp "C:\Program Files\Notepad++\notepad++.exe"
+
+if (Test-Path Alias:GitSummary) { Remove-Item Alias:GitSummary }
 New-Alias GitSummary "$env:CodeFolder\Dessyreqt\GitSummary\GitSummary.ps1"
+
+if (Test-Path Alias:IisExpress) { Remove-Item Alias:IisExpress }
 New-Alias IisExpress "C:\Program Files\IIS Express\iisexpress.exe"
 
 function Cover {
