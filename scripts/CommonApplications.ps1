@@ -3,7 +3,6 @@ choco install -y agentransack
 choco install -y bulkrenameutility.install
 choco install -y ccleaner
 choco install -y chocolateygui
-choco install -y cmdermini
 choco install -y dotnetcore-runtime.install
 choco install -y dotnet-runtime
 choco install -y dotnetfx
