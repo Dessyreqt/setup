@@ -33,9 +33,6 @@ function Update-NppConfig {
     $configXmlPath = "$env:APPDATA\Notepad++\config.xml"
     $configXml = [xml](Get-Content $configXmlPath)
 
-    $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
-    $stylerThemeNode.path = "$env:APPDATA\Notepad++\themes\VS2012-Dark.xml"
-
     Write-FormattedXml $configXmlPath $configXml
 }
 
