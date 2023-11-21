@@ -1,9 +1,32 @@
 Import-Module posh-git
 
+Function Get-LastCommandExecutionTime {
+    $history = Get-History
+    
+    if ($null -eq $history)
+    {
+        return $null
+    }
+    
+    $lastCommand = $history[-1]
+    $executionTime = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
+        
+    return ("{0:0d ;; }{1:0h ;; }{2:0m ;; }{3:0s ;; }{4:0ms;; }" -f $executionTime.Days, $executionTime.Hours, $executionTime.Minutes, $executionTime.Seconds, $executionTime.Milliseconds).Trim()
+}
+
 function Prompt { 
+    $lastExecutionTime = Get-LastCommandExecutionTime
     $prompt = Write-Prompt "[" -ForegroundColor DarkGray
     $prompt += Write-Prompt "$(Get-Date)" -ForegroundColor DarkCyan
     $prompt += Write-Prompt "] " -ForegroundColor DarkGray
+    
+    if ($null -ne $lastExecutionTime)
+    {
+        $prompt += Write-Prompt "[" -ForegroundColor DarkGray
+        $prompt += Write-Prompt $lastExecutionTime -ForegroundColor Yellow
+        $prompt += Write-Prompt "] " -ForegroundColor DarkGray
+    }
+    
     $prompt += Write-Prompt "$($ExecutionContext.SessionState.Path.CurrentLocation)" -ForegroundColor Green
     $prompt += Write-VcsStatus
     $prompt += Write-Prompt "`r`n>" -ForegroundColor DarkGray
