@@ -11,7 +11,7 @@ Function Get-LastCommandExecutionTime {
     $lastCommand = $history[-1]
     $executionTime = $lastCommand.EndExecutionTime - $lastCommand.StartExecutionTime
         
-    return ("{0:0d ;; }{1:0h ;; }{2:0m ;; }{3:0s ;; }{4:0ms;; }" -f $executionTime.Days, $executionTime.Hours, $executionTime.Minutes, $executionTime.Seconds, $executionTime.Milliseconds).Trim()
+    return ("{0:0d ;; }{1:0h ;; }{2:0m ;; }{3:0;;0}{4:\.000s;;s}" -f $executionTime.Days, $executionTime.Hours, $executionTime.Minutes, $executionTime.Seconds, $executionTime.Milliseconds).Trim()
 }
 
 function Prompt { 
