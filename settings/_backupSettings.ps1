@@ -51,9 +51,6 @@ function Update-NppConfig {
     $historyNode = $configXml.NotepadPlus.History
     $historyNode.SelectNodes("File") | ForEach-Object{ $historyNode.RemoveChild($_) } | Out-Null
 
-    $stylerThemeNode = $configXml.SelectSingleNode("/NotepadPlus/GUIConfigs/GUIConfig[@name='stylerTheme']")
-    $stylerThemeNode.path = $stylerThemeNode.path.Replace($env:APPDATA, "%APPDATA%")
-
     Write-FormattedXml $configXmlPath $configXml
 }
 

@@ -1,7 +1,6 @@
 choco install -y 7zip.install
 choco install -y agentransack
 choco install -y bulkrenameutility.install
-choco install -y ccleaner
 choco install -y chocolateygui
 choco install -y dotnetcore-runtime.install
 choco install -y dotnet-runtime
@@ -9,7 +8,8 @@ choco install -y dotnetfx
 choco install -y dropbox
 choco install -y firefox
 choco install -y googlechrome
-choco install -y keepass.install
+choco install -y keepassxc
+choco install -y mremoteng
 choco install -y notepadplusplus
 choco install -y patchcleaner
 choco install -y sysinternals
