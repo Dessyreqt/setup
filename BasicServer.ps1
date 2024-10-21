@@ -35,4 +35,4 @@ Start-Process powershell -Verb runAs
 
 Enable-UAC
 Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula
+Install-WindowsUpdate
