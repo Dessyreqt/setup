@@ -1,6 +1,6 @@
 choco install -y 7zip.install
 choco install -y agentransack
-choco install -y bulkrenameutility.install
+choco install -y bulkrenameutility --checksum 458D1FE3C21A13084ED9903FA2B23A928BE05151AC2817E4278BC2FB044B00EA
 choco install -y chocolateygui
 choco install -y dotnetcore-runtime.install
 choco install -y dotnet-runtime
