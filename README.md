@@ -3,6 +3,15 @@ A repository to keep setup scripts and settings
 
 ## Links to run the scripts
 
+It appears the links no longer work as a one-click solution. As a workaround do the following:
+- Run any link below. This should install Chocolatey. For some reason Boxstarter does not install with this script anymore.
+- After the script finishes, open a PowerShell window as Administrator.
+- Run the following command to install Boxstarter:
+  ```powershell
+  choco install boxstarter -y
+  ```
+- After Boxstarter is installed, run the link again. This should now work as expected.
+
 | Click link to run | Description |
 |---------|---------|
 | [Basic Client Script](https://boxstarter.org/package/url?https://raw.githubusercontent.com/Dessyreqt/setup/master/BasicClient.ps1) | for a basic client machine |
