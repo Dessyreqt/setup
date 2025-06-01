@@ -33,6 +33,14 @@ function Prompt {
     if ($prompt) {$prompt} else {" "}
 }
 
+function ArcPlayers {
+    explorer "C:\ProgramData\Archipelago\Players"
+}
+
+function ArcHost {
+    code "C:\ProgramData\Archipelago\options.yaml"
+}
+
 if (Test-Path Alias:Npp) { Remove-Item Alias:Npp }
 New-Alias Npp "C:\Program Files\Notepad++\notepad++.exe"
 
@@ -41,6 +49,9 @@ New-Alias GitSummary "$env:CodeFolder\Dessyreqt\GitSummary\GitSummary.ps1"
 
 if (Test-Path Alias:IisExpress) { Remove-Item Alias:IisExpress }
 New-Alias IisExpress "C:\Program Files\IIS Express\iisexpress.exe"
+
+if (Test-Path Alias:ArcGen) { Remove-Item Alias:ArcGen }
+New-Alias ArcGen "C:\ProgramData\Archipelago\ArchipelagoGenerate.exe"
 
 function Cover {
 	param([string]$path)

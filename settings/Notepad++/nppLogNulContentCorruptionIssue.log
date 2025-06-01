@@ -378,3 +378,169 @@
 2023-11-20 06:49:05  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  5174/5174 bytes are written.
 2023-11-20 06:49:05  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
 2023-11-20 06:49:05  WM_DESTROY (isEndSessionStarted == true)
+2023-12-14 03:13:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2023-12-14 03:13:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2023-12-14 03:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2023-12-14 03:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11608/11608 bytes are written.
+2023-12-14 03:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2023-12-14 03:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2023-12-14 03:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  15424/15424 bytes are written.
+2023-12-14 03:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2023-12-14 03:13:02  WM_DESTROY (isEndSessionStarted == true)
+2024-01-02 01:25:36  WM_QUERYENDSESSION (lParam: 1073741824 - ENDSESSION_CRITICAL) =====================================
+2024-01-02 01:25:36  WM_ENDSESSION (wParam: TRUE, lParam: 1073741824 - ENDSESSION_CRITICAL)
+2024-01-02 01:25:37  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-01-02 01:25:37  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11590/11590 bytes are written.
+2024-01-02 01:25:37  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-01-02 01:25:37  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-01-02 01:25:37  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  17859/17859 bytes are written.
+2024-01-02 01:25:37  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-01-10 02:54:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-01-10 02:54:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-01-10 02:54:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-01-10 02:54:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11816/11816 bytes are written.
+2024-01-10 02:54:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-01-10 02:54:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-01-10 02:54:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  17881/17881 bytes are written.
+2024-01-10 02:54:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-03-13 03:29:02  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-03-13 03:29:02  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-03-13 03:29:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-03-13 03:29:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11504/11504 bytes are written.
+2024-03-13 03:29:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-03-13 03:29:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-03-13 03:29:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  21084/21084 bytes are written.
+2024-03-13 03:29:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-03-13 03:29:03  WM_DESTROY (isEndSessionStarted == true)
+2024-04-11 04:27:02  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-04-11 04:27:02  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-04-11 04:27:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-04-11 04:27:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11561/11561 bytes are written.
+2024-04-11 04:27:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-04-11 04:27:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-04-11 04:27:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  22270/22270 bytes are written.
+2024-04-11 04:27:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-04-11 04:27:03  WM_DESTROY (isEndSessionStarted == true)
+2024-05-21 02:44:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-05-21 02:44:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-05-21 02:44:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-05-21 02:44:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11657/11657 bytes are written.
+2024-05-21 02:44:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-05-21 02:44:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-05-21 02:44:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  10077/10077 bytes are written.
+2024-05-21 02:44:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-05-21 02:44:01  WM_DESTROY (isEndSessionStarted == true)
+2024-05-24 08:53:32  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-05-24 08:53:32  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-05-24 08:53:33  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-05-24 08:53:33  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11750/11750 bytes are written.
+2024-05-24 08:53:33  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-05-24 08:53:33  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-05-24 08:53:33  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  10074/10074 bytes are written.
+2024-05-24 08:53:33  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-05-24 08:53:33  WM_DESTROY (isEndSessionStarted == true)
+2024-06-12 03:04:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-06-12 03:04:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-06-12 03:04:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-06-12 03:04:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11696/11696 bytes are written.
+2024-06-12 03:04:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-06-12 03:04:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-06-12 03:04:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  11777/11777 bytes are written.
+2024-06-12 03:04:01  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-06-12 03:04:01  WM_DESTROY (isEndSessionStarted == true)
+2024-07-09 21:49:25  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-07-09 21:49:25  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-07-09 21:49:25  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-07-09 21:49:25  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11442/11442 bytes are written.
+2024-07-09 21:49:25  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-07-09 21:49:25  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-07-09 21:49:25  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  11302/11302 bytes are written.
+2024-07-09 21:49:25  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-08-14 02:42:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-08-14 02:42:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-08-14 02:42:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-08-14 02:42:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11526/11526 bytes are written.
+2024-08-14 02:42:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-08-14 02:42:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-08-14 02:42:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  13266/13266 bytes are written.
+2024-08-14 02:42:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-08-14 02:42:02  WM_DESTROY (isEndSessionStarted == true)
+2024-08-14 08:18:08  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-08-14 08:18:08  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-08-14 08:18:09  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-08-14 08:18:09  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11526/11526 bytes are written.
+2024-08-14 08:18:09  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-08-14 08:18:09  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-08-14 08:18:09  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  12574/12574 bytes are written.
+2024-08-14 08:18:09  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-08-14 08:18:09  WM_DESTROY (isEndSessionStarted == true)
+2024-09-11 04:21:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-09-11 04:21:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-09-11 04:21:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-09-11 04:21:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11735/11735 bytes are written.
+2024-09-11 04:21:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-09-11 04:21:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-09-11 04:21:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  15119/15119 bytes are written.
+2024-09-11 04:21:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-09-11 04:21:02  WM_DESTROY (isEndSessionStarted == true)
+2024-11-13 04:34:03  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-11-13 04:34:03  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-11-13 04:34:04  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-11-13 04:34:04  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11349/11349 bytes are written.
+2024-11-13 04:34:04  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-11-13 04:34:04  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-11-13 04:34:04  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  19280/19280 bytes are written.
+2024-11-13 04:34:04  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-11-13 04:34:04  WM_DESTROY (isEndSessionStarted == true)
+2024-11-28 20:59:15  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2024-11-28 20:59:15  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2024-11-28 20:59:15  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-11-28 20:59:15  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11480/11480 bytes are written.
+2024-11-28 20:59:15  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-11-28 20:59:15  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-11-28 20:59:15  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  21126/21126 bytes are written.
+2024-11-28 20:59:15  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-12-11 04:46:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2024-12-11 04:46:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2024-12-11 04:46:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2024-12-11 04:46:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11491/11491 bytes are written.
+2024-12-11 04:46:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2024-12-11 04:46:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2024-12-11 04:46:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  21122/21122 bytes are written.
+2024-12-11 04:46:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2024-12-11 04:46:02  WM_DESTROY (isEndSessionStarted == true)
+2025-01-15 04:39:03  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2025-01-15 04:39:03  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2025-01-15 04:39:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2025-01-15 04:39:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11692/11692 bytes are written.
+2025-01-15 04:39:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2025-01-15 04:39:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2025-01-15 04:39:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  27939/27939 bytes are written.
+2025-01-15 04:39:03  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2025-01-15 04:39:03  WM_DESTROY (isEndSessionStarted == true)
+2025-02-16 04:13:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2025-02-16 04:13:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2025-02-16 04:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2025-02-16 04:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11563/11563 bytes are written.
+2025-02-16 04:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2025-02-16 04:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2025-02-16 04:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  30422/30422 bytes are written.
+2025-02-16 04:13:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2025-02-16 04:13:02  WM_DESTROY (isEndSessionStarted == true)
+2025-02-19 18:31:26  WM_QUERYENDSESSION (lParam: 0 - ordinary system shutdown/restart) =====================================
+2025-02-19 18:31:26  WM_ENDSESSION (wParam: TRUE, lParam: 0 - ordinary system shutdown/restart)
+2025-02-19 18:31:27  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2025-02-19 18:31:27  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11610/11610 bytes are written.
+2025-02-19 18:31:27  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2025-02-19 18:31:27  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2025-02-19 18:31:27  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  31153/31153 bytes are written.
+2025-02-19 18:31:27  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
+2025-02-19 18:31:27  WM_DESTROY (isEndSessionStarted == true)
+2025-03-18 02:39:01  WM_QUERYENDSESSION (lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL) =====================================
+2025-03-18 02:39:01  WM_ENDSESSION (wParam: TRUE, lParam: 1073741825 - ENDSESSION_CLOSEAPP - ENDSESSION_CRITICAL)
+2025-03-18 02:39:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is opened.
+2025-03-18 02:39:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml  11549/11549 bytes are written.
+2025-03-18 02:39:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\config.xml is closed.
+2025-03-18 02:39:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is opened.
+2025-03-18 02:39:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml  31115/31115 bytes are written.
+2025-03-18 02:39:02  C:\Users\Dessyreqt\AppData\Roaming\Notepad++\session.xml is closed.
