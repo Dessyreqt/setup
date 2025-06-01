@@ -27,4 +27,4 @@ executeScript "ClientApplications.ps1"
 
 Enable-UAC
 Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula
+Install-WindowsUpdate
