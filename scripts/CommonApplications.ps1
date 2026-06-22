@@ -12,5 +12,5 @@ choco install -y keepassxc
 choco install -y mremoteng
 choco install -y notepadplusplus
 choco install -y patchcleaner
-choco install -y sysinternals
+# choco install -y sysinternals
 choco install -y treesizefree
